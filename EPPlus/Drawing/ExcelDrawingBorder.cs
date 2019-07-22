@@ -1,4 +1,4 @@
-﻿/*******************************************************************************
+/*******************************************************************************
  * You may amend and distribute as you like, but don't remove this header!
  *
  * EPPlus provides server-side generation of Excel 2007/2010 spreadsheets.
@@ -171,6 +171,8 @@ namespace OfficeOpenXml.Drawing
         {
             switch (text)
             {
+                case "":
+                    return (eLineStyle)Enum.Parse(typeof(eLineStyle), "solid", true);
                 case "dash":
                 case "dot":
                 case "dashDot":
