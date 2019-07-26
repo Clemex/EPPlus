@@ -153,11 +153,7 @@ namespace OfficeOpenXml.Drawing.Chart
                 {
                     Color c = Color.FromArgb(Convert.ToInt32(color, 16));
                     int a = getAlphaChannel(LINECOLOR_PATH);
-                    if (a != 255)
-                    {
-                        c = Color.FromArgb(a, c);
-                    }
-                    return c;
+                    return Color.FromArgb(a, c);
                 }
             }
             set
